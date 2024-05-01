@@ -1,0 +1,36 @@
+.sketchbook{
+padding-top: 90px;
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // align-items: center;
+    gap: 30px;
+  }
+  &__left{
+    margin-top: 24px;
+    grid-column: 4 span;
+  }
+  &__title{
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: #666;
+  }
+  &__descr{
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: #85859b;
+  }
+
+  &__right{
+    grid-column: 8 span;
+    font-size: 0;
+  }
+}

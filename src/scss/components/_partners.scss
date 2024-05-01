@@ -1,0 +1,14 @@
+.partners{
+  padding: 85px 0 95px 0;
+  background-color: var(--grey);
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__partner{
+    grid-column: 3 span;
+  }
+}

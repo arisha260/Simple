@@ -1,0 +1,12 @@
+.header{
+  border-bottom: 1px solid #ddd;
+  .header__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 0;
+  }
+  .header__logo{
+    margin-right: 296px;
+  }
+}

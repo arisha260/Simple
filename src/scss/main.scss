@@ -1,0 +1,65 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/hero";
+@import "./components/descr";
+@import "./components/products";
+@import "./components/partners";
+@import "./components/sketchbook";
+@import "./components/footer";
+
+  .nav__link:focus{
+    color: #4c5866;
+    // background: #dad9fb;
+    outline: none;
+  }
+  .nav__btn:focus{
+    color: #4c5866;
+    // background: #dad9fb;
+    outline: none;
+  }
+  .btn:focus{
+    color: #7875fe;
+    background: #dad9fb;
+    outline: none;
+  }
+  @media(hover:hover){
+    .nav__link:hover{
+      color: var(--blue);
+    }
+    .nav__btn:hover{
+      color: var(--blue)
+    }
+    .btn:hover{
+      color: var(--light-color);
+      background: #7875fe;
+    }
+  }
+  .nav__link:active{
+    color: #4946b4;
+  }
+  .nav__btn:active{
+    color: #4946b4;
+  }
+.btn{
+  display: inline-block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 22px 89px;
+  transition: all 0.5s ease;
+}
+
+.btn:active{
+  color: var(--light-color);
+  background: #4946b4;
+}
+
