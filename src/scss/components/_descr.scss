@@ -44,7 +44,6 @@
     grid-column: 12 span;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
   }
   &__bottom-left{
     grid-column: 8 span;

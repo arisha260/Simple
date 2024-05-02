@@ -1,13 +1,21 @@
 .nav{
+
+  @include tablet{
+    padding-top: 30px;
+    margin: 0 auto;
+    grid-column: 6 span;
+    align-items: center;
+    justify-content: center;
+  }
   .nav__list{
+    margin-right: 60px;
     display: flex;
     align-items: center;
     gap: 60px;
-  }
-  .nav__icons{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    @include tablet{
+      margin-right: 0;
+      justify-content: space-between;
+    }
   }
   .nav__link{
     position: relative;

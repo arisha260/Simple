@@ -1,14 +1,23 @@
 .sketchbook{
 padding-top: 90px;
+  @include tablet{
+    padding-top: 60px;
+  }
   &__container{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    // align-items: center;
-    gap: 30px;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 15px;
+    @include tablet{
+      padding-right: 0;
+    }
   }
   &__left{
     margin-top: 24px;
     grid-column: 4 span;
+    @include tablet{
+      margin-top: 0;
+      grid-column: 6 span;
+    }
   }
   &__title{
     margin: 0;
@@ -30,7 +39,11 @@ padding-top: 90px;
   }
 
   &__right{
-    grid-column: 8 span;
+    grid-column: 7 span;
     font-size: 0;
+    @include tablet{
+
+      grid-column: 8/6 span;
+    }
   }
 }
