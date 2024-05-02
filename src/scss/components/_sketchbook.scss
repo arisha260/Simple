@@ -10,6 +10,9 @@ padding-top: 90px;
     @include tablet{
       padding-right: 0;
     }
+    @include small-tablet{
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   &__left{
     margin-top: 24px;
@@ -17,6 +20,11 @@ padding-top: 90px;
     @include tablet{
       margin-top: 0;
       grid-column: 6 span;
+    }
+    @include small-tablet{
+      padding-bottom: 60px;
+      grid-column: 6 span;
+      grid-row: 2;
     }
   }
   &__title{
@@ -27,6 +35,9 @@ padding-top: 90px;
     font-size: 40px;
     line-height: 100%;
     color: #666;
+    @include small-tablet{
+      font-size: 24px;
+    }
   }
   &__descr{
     margin: 0;
@@ -36,14 +47,21 @@ padding-top: 90px;
     font-size: 18px;
     line-height: 170%;
     color: #85859b;
+    @include small-tablet{
+      font-size: 16px;
+    }
   }
 
   &__right{
     grid-column: 7 span;
     font-size: 0;
     @include tablet{
-
       grid-column: 8/6 span;
+    }
+    @include small-tablet{
+      grid-column: 2/4 span;
+      justify-items: center;
+      grid-row: 1;
     }
   }
 }

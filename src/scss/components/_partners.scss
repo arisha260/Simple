@@ -1,14 +1,29 @@
 .partners{
   padding: 85px 0 95px 0;
   background-color: var(--grey);
+  @include mobile{
+    padding: 55px 0 25px 0;
+  }
   &__container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     justify-content: center;
     gap: 30px;
+    @include small-tablet{
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include mobile{
+      display: block;
+    }
   }
   &__partner{
     grid-column: 3 span;
+    @include small-tablet{
+      grid-column: 3 span;
+    }
+    @include mobile{
+      display: none;
+    }
   }
 }

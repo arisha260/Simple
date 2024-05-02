@@ -13,6 +13,13 @@
 @import "./components/partners";
 @import "./components/sketchbook";
 @import "./components/footer";
+@import "./components/swiper";
+@import "./components/burger";
+
+
+  .hidden{
+    overflow: hidden;
+  }
 
   .nav__link:focus{
     color: #4c5866;
@@ -56,6 +63,9 @@
   border: 1px solid var(--blue);
   padding: 22px 89px;
   transition: all 0.5s ease;
+  @include small-tablet{
+    padding: 19px 60px;
+  }
 }
 
 .btn:active{

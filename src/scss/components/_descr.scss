@@ -5,6 +5,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    @include mobile{
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   &__top{
     padding-bottom: 90px;
@@ -14,6 +17,10 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    @include mobile{
+      grid-template-columns: repeat(6, 1fr);
+      grid-column: 6 span;
+    }
   }
   &__column{
     padding-top: 20px;
@@ -22,6 +29,13 @@
     grid-column: 4 span;
     border-top: 1px solid #c0c0c0;
     gap: 30px;
+    @include tablet{
+      flex-direction: column;
+    }
+    @include mobile{
+      flex-direction: row;
+      grid-column: 6 span;
+    }
   }
   &__column-title{
     margin: 0;
@@ -30,6 +44,9 @@
     font-size: 18px;
     line-height: 150%;
     color: #666;
+    @include small-tablet{
+      font-size: 16px;
+    }
   }
   &__column-descr{
     margin: 0;
@@ -38,18 +55,33 @@
     font-size: 18px;
     line-height: 150%;
     color: #85859b;
+    @include small-tablet{
+      font-size: 16px;
+    }
   }
 
   &__bottom{
     grid-column: 12 span;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    @include small-tablet{
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   &__bottom-left{
     grid-column: 8 span;
+    @include small-tablet{
+      grid-column: 6 span;
+    }
   }
   &__bottom-right{
     grid-column: 4 span;
+    @include small-tablet{
+      grid-column: 6 span;
+    }
+  }
+  &__image{
+    width: 100%;
   }
 }
 .bottom-right__title{
@@ -60,6 +92,9 @@
   font-size: 40px;
   line-height: 100%;
   color: #666;
+  @include small-tablet{
+    font-size: 24px;
+  }
 }
 .bottom-right__descr{
   margin: 0;
@@ -70,5 +105,8 @@
   color: #85859b;
   &:not(:last-child){
     margin-bottom: 20px;
+  }
+  @include small-tablet{
+    font-size: 16px;
   }
 }

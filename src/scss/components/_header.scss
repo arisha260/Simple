@@ -1,15 +1,24 @@
 .header{
   border-bottom: 1px solid #ddd;
   .header__container{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 28px 15px;
     @include tablet{
+      max-width: 700px;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+    }
+    @include small-tablet{
+      max-width: 510px;
+    }
+    @include mobile{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
     }
   }
   .header__logo{
@@ -20,17 +29,35 @@
     @include tablet{
       grid-column: 3 span;
       grid-row: 1;
-      justify-self: center;
+      // justify-self: center;
+    }
+    @include mobile{
+      padding-bottom: 14px;
+      margin: 0 auto;
+      grid-column: 6 span;
     }
   }
   .header__icons{
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
     @include tablet{
-      grid-column: 3 span;
+      grid-column: 6/1 span;
       grid-row: 1;
-      justify-self: center;
+      margin-left: auto;
     }
+    @include mobile{
+      padding-top: 14px;
+      width: 100%;
+      grid-column: 6 span;
+      grid-row: 2;
+      justify-content: space-between;
+      border-top: 1px solid #ddd;
+    }
+  }
+  &__icons-buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 }
